@@ -1,8 +1,11 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
+	import { goto, beforeNavigate, afterNavigate } from '$app/navigation';
 	function goToBlog() {
 		goto('/blog', { replaceState: true });
 	}
+
+	beforeNavigate((nav) => console.log('beforeNav', nav));
+	afterNavigate((nav) => console.log('afterNav', nav));
 </script>
 
 <h1>Hello World</h1>
