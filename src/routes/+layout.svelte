@@ -7,6 +7,8 @@
 <style lang="scss">
 	.main-content {
 		margin: 16px 16px;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+			sans-serif;
 	}
 
 	header,
