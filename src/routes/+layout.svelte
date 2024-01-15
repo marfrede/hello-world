@@ -1,8 +1,14 @@
 <header><span>Svelte Tutorial</span></header>
-<slot />
+<div class="main-content">
+	<slot />
+</div>
 <footer><span>© marvinfrede</span></footer>
 
 <style lang="scss">
+	.main-content {
+		margin: 16px 16px;
+	}
+
 	header,
 	footer {
 		position: relative;
