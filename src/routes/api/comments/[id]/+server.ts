@@ -14,3 +14,13 @@ export async function PATCH(requestEvent: RequestEvent): Promise<Response> {
 	comments[commentIndex].text = text;
 	return json(comments[commentIndex]);
 }
+
+export async function DELETE(requestEvent: RequestEvent): Promise<Response> {
+	const { id } = requestEvent.params as { id: string };
+	const commentIndex = comments.findIndex((c) => c.id === +id);
+	if (commentIndex >= 0) {
+		comments.splice(commentIndex, 1);
+		return json(comments);
+	}
+	return new Response(null, { status: 404 });
+}
